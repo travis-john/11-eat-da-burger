@@ -1,5 +1,5 @@
 //importing orm functions
-const orm = require('../config/orm.js');
+const orm = require('../config/orm');
 
 let burgers = {
   all: (cb) => {

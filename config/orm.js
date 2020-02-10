@@ -1,5 +1,5 @@
 //Import connection from connection.js
-var connection = require('../config.connection.js');
+var connection = require('../config/connection');
 
 // Helper function for SQL syntax.
 function printQuestionMarks(num) {
@@ -36,9 +36,9 @@ function objToSql(ob) {
 }
 
 //All SQL queries
-var orm {
+let orm = {
   all: (table, cb) => {
-    let query = 'SELECT * FROM ' + table ";";
+    let query = 'SELECT * FROM ' + table + ";";
     connection.query(query, (err,result) => {
       if (err) throw err
       cb(result);
@@ -78,3 +78,5 @@ var orm {
     });
   }
 }
+
+module.exports = orm;
