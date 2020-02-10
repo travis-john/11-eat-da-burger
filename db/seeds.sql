@@ -1,4 +1,4 @@
-INSERT INTO burger (name, devoured)
+INSERT INTO burgers (name, devoured)
 VALUES
 ('New Bacon-ings', true),
 ('Foot Feta-ish', true),
