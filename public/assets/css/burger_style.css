@@ -2,12 +2,35 @@ body {
   background: #DA291C;
 }
 
-h1, h2 {
-  color: #FFC72C;\
+h1 {
+  color: #FFC72C;
+  font-size: 3.5rem;
 }
 
-h1 {
-  font-size: 3.5rem;
+h2 {
+  color: #DA291C;
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  font-size: 1.125rem;
+}
+
+.row {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.form-inline .form-control{
+  width: 15rem;
+}
+
+.panel {
+  background-color: #FFC72C;
+  border-radius: .25rem;
 }
 
 .burger-img {
@@ -15,4 +38,8 @@ h1 {
   width: 25%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.burger-form {
+  height: 5rem;
 }
