@@ -70,8 +70,8 @@ let orm = {
     query += " WHERE ";
     query += condition;
 
-    console.log(queryString);
-    connection.query(queryString, (err, result) => {
+    console.log(query);
+    connection.query(query, (err, result) => {
       if (err) throw err
 
       cb(result);

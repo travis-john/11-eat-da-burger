@@ -1,9 +1,9 @@
 <li class="mb-2 w-100 d-flex flex-row">
 	<span class="flex-grow-1">{{name}}</span>
 
-	<button class="devoured-btn mr-3" type="submit" name="action" data-id="{{id}}" data-newdevoured="{{devoured}}">
+	<button class="btn btn-primary change-devour mr-3" type="submit" data-id="{{id}}" data-newdevoured="{{devoured}}">
 		{{#if devoured}}ORDER AGAIN{{else}}DEVOUR{{/if}}
 	</button>
 
-	<button class="delete-btn mr-3" type="submit" name="action" data-id="{{this.id}}">DELETE</button>
+	<button class="btn btn-secondary delete-burger mr-3" type="submit" data-id="{{this.id}}">DELETE</button>
 </li>
