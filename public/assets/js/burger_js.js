@@ -13,18 +13,20 @@ $(function(){
     });
   });
 
-  $('.create-form').on('submit', (event) => {
+  $('.burger-form').on('submit', function(event) {
 
     event.preventDefault();
 
     let newBurger = {
       name: $('#burger-name').val().trim(),
-      devoured: false
+      // devoured: false
     }
+
+    console.log(newBurger);
 
     $.ajax('/api/burgers', {
       type: 'POST',
-      data: newburger
+      data: newBurger
     }).then(
       function() {
         console.log('Created new burger');
@@ -34,7 +36,7 @@ $(function(){
     );
   });
 
-  $(".delete-burger").on("click", (event) => {
+  $(".delete-burger").on("click", function(event) {
     var id = $(this).data('id');
 
     // Send the DELETE request.

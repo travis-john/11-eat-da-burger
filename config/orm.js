@@ -44,7 +44,7 @@ let orm = {
       cb(result);
     });
   },
-  insert: (table, cols, vals, cb) => {
+  create: (table, cols, vals, cb) => {
     let query = 'INSERT INTO ' + table;
 
     query += " (";
@@ -54,7 +54,7 @@ let orm = {
     query += printQuestionMarks(vals.length);
     query += ") ";
 
-    console.log(queryString);
+    console.log(query);
 
     connection.query(query, vals, function(err, result) {
       if (err) throw err
