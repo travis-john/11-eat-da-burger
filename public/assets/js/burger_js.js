@@ -2,7 +2,7 @@ $(function(){
   $('.change-devour').on('click',function(event){
     let id = $(this).data('id'),
         devoured = $(this).data('devoured'),
-        devouredState = { devoured: devoured };
+        devouredState = { devoured: !devoured };
 
     $.ajax('/api/burgers/' + id, {
       type: 'PUT',
