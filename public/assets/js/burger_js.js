@@ -1,7 +1,7 @@
 $(function(){
   $('.change-devour').on('click',function(event){
     let id = $(this).data('id'),
-        devoured = $(this).data('newdevoured'),
+        devoured = $(this).data('devoured'),
         devouredState = { devoured: devoured };
 
     $.ajax('/api/burgers/' + id, {
@@ -38,11 +38,11 @@ $(function(){
     var id = $(this).data('id');
 
     // Send the DELETE request.
-    $.ajax('/api/cats/' + id, {
+    $.ajax('/api/burgers/' + id, {
       type: "DELETE"
     }).then(
       function() {
-        console.log("deleted cat", id);
+        console.log('Deleted burger', id);
         // Reload the page to get the updated list
         location.reload();
       }
