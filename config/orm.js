@@ -76,6 +76,19 @@ let orm = {
 
       cb(result);
     });
+  },
+  delete: (table, condition, cb) => {
+    let query = "DELETE FROM " + table;
+    query += " WHERE ";
+    query += condition;
+
+    connection.query(query, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
   }
 }
 
